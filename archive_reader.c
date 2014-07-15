@@ -350,7 +350,8 @@ ZEND_METHOD(ArchiveReader, getNextEntry)
 ZEND_METHOD(ArchiveReader, readCurrentEntryData){
 	zval *this = getThis();
 	archive_file_t *arch;
-	char *buf, *error_string;
+	char *buf;
+	const char *error_string;
 	size_t len;
 	int r, error_num;
 	long count;
